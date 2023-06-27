@@ -25,7 +25,11 @@ h1{
     font-size: 13px;
     font-weight: normal;
 }
-
+.my-image {
+    width: 100px;
+    height: 110px;
+  }
+  
 .prueba-svg{
     fill: aqua;
 }
