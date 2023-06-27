@@ -1,0 +1,135 @@
+:root{ 
+	/* Colors */
+    --main-background: rgba(240,240,240,255);
+    --black: hsl(0, 0%, 0%);
+    --red: hsl(0, 100%, 50%);
+    --white: hsl(0, 0%, 100%);
+}
+*{
+	box-sizing: border-box; 
+	margin: 0;
+	padding: 0;
+    /* outline: 1px solid red; */
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+   max-width: 100%;
+   min-height: 100vh; 
+   background-color: var(--main-background);
+   
+    
+}
+
+h1{
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.prueba-svg{
+    fill: aqua;
+}
+
+.table {
+    width: 96%;
+    border-spacing: 0px;
+    margin: 0px 0px 30px 15px;
+    font-size: 12px;
+}
+
+.main{
+    width: 65%;
+    background-color: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 30px 0px 40px;
+
+}
+.top{
+    display: flex;
+    padding-bottom: 20px;
+}
+.top-img{
+    position: relative;
+    
+}
+
+.main-icon{
+    position: absolute;
+    right: 4%;
+    bottom: 10%;
+    filter: invert();
+    
+}
+.top-description{
+    padding: 15px 12px 0px 20px;
+}
+.top-description h1{
+    font-size: 15px;
+    opacity: 0.8;
+
+}
+.top-description span{
+    color: var(--red);
+}
+.top-description p{
+    margin: 5px 0px 10px 0px;
+    font-size: 15px;
+    line-height: 14px;
+    opacity: 0.55;
+}
+.top-description button{
+    font-size: 18px;
+    opacity: 0.8;
+    padding: 10px 42px 10px 25px;
+    border: none;
+    background-color: var(--main-background);
+}
+
+.gray-tr{
+    background-color: var(--main-background);
+    
+}
+.trs{
+    display: grid;
+    grid-template-columns: 0.9fr 0.7fr 1.4fr;
+    align-items: center;
+}
+.ths{
+    font-size: 13px;
+
+}
+.first-td,.first-th{
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+}
+
+.first-th{
+    padding-top: 4px;
+    
+    
+}
+
+.second-th{
+    text-transform: uppercase;
+}
+.third-th{
+    font-size: 15px;
+}
+
+.first-th,.third-th{
+    text-align: left;
+}
+.first-td, .first-th{
+ 
+    margin: 0;
+    padding: 0;
+}
+.second-td, .second-th{
+  
+}
+.third-td, .third-th{
+  
+}
+
+/* Cuando se selecciona la caja, se cambia el color de fondo y el color */

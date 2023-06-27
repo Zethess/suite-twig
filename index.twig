@@ -1,0 +1,167 @@
+{# index.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Suite Vip</title>
+</head>
+<body>
+    <!-- {% include 'assets/template/svg_template.twig' %} -->
+<div class="main">
+    <div class="top">
+        <div class="top-img">
+            <img src="assets/images/hotel.jpeg" class="main-img" alt="hotel" width="220" height="152">
+
+            {% set width = '20px' %}
+            {% set height = '20px' %}
+            {% include '/assets/images/secador.twig' %}
+            {% set width = '40px' %}
+            {% set height = '40px' %}
+            {% include '/assets/images/secador.twig' %}
+  
+        </div>
+        <div class="top-description">
+            <h1>Suite Vip</h1>
+            <span>Solo queda 1!!</span>
+            <p>Habitacion con cama de matrimonio, spa y Jacuzi. Cama de 200cm. impedit asperiores dolorum numquam molestiae hic libero maiores veniam minus error illo quisquam distinctio, laudantium </p>
+            <button>Ver más</button>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="table">
+                <div class="first-tr trs gray-tr">
+                    <div class="first-th ths">
+                        <!-- <svg class="prueba-svg" width="25px" height="20px">
+                            <use xlink:href="assets/svg/plantilla.svg#2p-svg"></use>
+                        </svg> -->
+                        <span>para 2 personas</span>
+                    </div>
+                    <div class="second-th ths">
+                        <span>flexible</span>
+                    </div>
+                    <div class="third-th third-th-font ths">
+                        <span>precio para 2 noches</span>
+                    </div>
+                </div>
+                <div class="second-tr trs">
+                    <div class="first-td tds">
+                        <span>Solo alojamiento</span>
+                    </div>
+                    <div class="second-td tds">
+                        <span>Cancelación gratuita</span>
+                        <!-- <svg  width="19px" height="13px">
+                            <use xlink:href="assets/svg/plantilla.svg#info"></use>
+                        </svg> -->
+                    </div>
+                    <div class="third-td tds">
+                        <p><del>450,00€</del><strong>325,00€</strong></p>
+                        <span>0</span>
+                    </div>
+                </div>
+                <div class="third-tr trs">
+                    <div class="first-td tds">
+                        <!-- <svg  width="20px" height="16px">
+                            <use xlink:href="assets/svg/plantilla.svg#desayuno"></use>
+                        </svg> -->
+                        <span>Con desayuno</span>
+                    </div>
+                    <div class="second-td tds">
+                        <span>Cancelación gratuita</span>
+                        <!-- <svg  width="19px" height="13px">
+                            <use xlink:href="assets/svg/plantilla.svg#info"></use>
+                        </svg> -->
+                    </div>
+                    <div class="third-td tds">
+                        <p><del>495,00€</del><strong>360,00€</strong></p>
+                        <span>0</span>
+                    </div>
+                </div>
+                <div class="first-tr trs gray-tr">
+                    <div class="first-th ths">
+                        <!-- <svg  width="25px" height="20px">
+                            <use xlink:href="assets/svg/plantilla.svg#2p-svg"></use>
+                        </svg> -->
+                        <span>para 2 personas</span>
+                    </div>
+                    <div class="second-th ths">
+                        <span>oferta</span>
+                    </div>
+                    <div class="third-th ths">
+                        <span>precio para 2 noches</span>
+                    </div>
+                </div>
+                <div class="seoncond-tr trs">
+                    <div class="first-td tds">
+                        <!-- <svg  width="22px" height="16px">
+                            <use xlink:href="assets/svg/plantilla.svg#cama"></use>
+                        </svg> -->
+                        <span>Solo alojamiento</span>
+                    </div>
+                    <div class="second-td tds">
+                        <span>NO reembolsable</span>
+                        <!-- <svg  width="19px" height="13px">
+                            <use xlink:href="assets/svg/plantilla.svg#info"></use>
+                        </svg> -->
+                    </div>
+                    <div class="third-td tds">
+                        <p><del>450,00€</del><strong>295,00€</strong></p>
+                        <span>0</span>
+                    </div>
+                </div>
+                <div class="third-tr trs">
+                    <div class="first-td tds">
+                        <!-- <svg  width="20px" height="16px">
+                            <use xlink:href="assets/svg/plantilla.svg#desayuno"></use>
+                        </svg> -->
+                        <span>Con desayuno</span>
+                    </div>
+                    <div class="second-td tds">
+                        <span>NO reembolsable</span>
+                        <!-- <svg  width="19px" height="13px">
+                            <use xlink:href="assets/svg/plantilla.svg#info"></use>
+                        </svg> -->
+                    </div>
+                    <div class="third-td tds">
+                        <p><del>495,00€</del><strong>325,00€</strong></p>
+                        <span>0</span>
+                    </div>
+                </div>
+                <div class="first-tr trs gray-tr">
+                    <div class="first-th ths">
+                        <!-- <svg  width="25px" height="20px">
+                            <use xlink:href="assets/svg/plantilla.svg#2p-svg"></use>
+                        </svg> -->
+                        <span>para 2 personas</span>
+                    </div>
+                    <div class="second-th ths">
+                        <span>oferta</span>
+                    </div>
+                    <div class="third-th ths">
+                        <span>precio para 2 noches</span>
+                    </div>
+                </div>
+                <div class="second-tr trs">
+                    <div class="first-td tds">
+                        <!-- <svg  width="20px" height="16px">
+                            <use xlink:href="assets/svg/plantilla.svg#desayuno"></use>
+                        </svg> -->
+                        <span>Con desayuno</span>
+                    </div>
+                    <div class="second-td tds">
+                        <span>Oferta fin de semana romántico</span>
+                        <!-- <svg  width="19px" height="13px">
+                            <use xlink:href="assets/svg/plantilla.svg#info"></use>
+                        </svg> -->
+                    </div>
+                    <div class="third-td tds">
+                        <span><strong>460,00€</strong></span>
+                        <span>0</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
