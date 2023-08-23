@@ -1,0 +1,137 @@
+
+:root{ 
+    
+    /*Tipo de letra utilizada*/
+    --arial: Arial, Helvetica, sans-serif;
+
+    /*Color de las unicas sombras que hay*/
+    --shadow-color: hsl(0, 2%, 65%);
+    
+	/* Colors */
+
+    /* Color de los distintos iconos */
+    --icons-color-black: hsl(0, 0%, 0%);
+    --icons-color-gray: hsl(0, 0%, 74%);
+
+    /*Color de los iconos de Plantilla hotel info*/
+    --close-icons-color: hsl(5, 64%, 48%);
+
+    /*Color de los iconos de Plantilla Selection*/
+    --trash-icon-color-selection:hsl(9, 93%, 55%);
+
+    /*Backgrounds colors*/
+    --white: hsl(0, 0%, 100%);
+    --background-info-gray:rgba(240,240,240,255);
+    --background-hotel-green:hsl(118, 51%, 43%);
+    --background-input-color: rgb(8, 131, 8);
+
+    /*Backgrounds color plantilla selection*/
+    --button-background-color-selection: hsl(38, 100%, 72%);
+
+    /*Backgrounds color plantilla activities*/
+     --background-activity-button:hsl(45, 90%, 56%);
+    
+    /*Colores de letras y otros elementos*/
+    --black: hsl(0, 0%, 0%);
+    --color-h2-hotel-red: hsl(0, 100%, 50%);
+    --color-offer-green: hsla(118, 52%, 42%,0.9);
+    --amount-color-input-hotel: hsl(0, 0%, 71%);
+
+    /*Color plantilla Selection*/
+    --selection-color-strong-green:hsl(118, 45%, 55%);
+   
+    /*Opacity aplicada en el color negro para obtener variaciones de grises*/
+    --h1-color-opacity08: hsla(0, 0%, 0%,0.8);
+    --h2-color-opacity08: hsla(0, 0%, 0%,0.8);
+    --del-color-opacity08: hsla(0, 0%, 0%,0.8);
+
+    --h1-color-opacity07: hsla(0, 0%, 0%,0.7);
+    --h2-color-opacity07: hsla(0, 0%, 0%,0.7);
+    --p-color-opacity07: hsla(0, 0%, 0%,0.7);
+    --button-color-opacity07: hsla(0, 0%, 0%,0.7);
+    --paragraph-color-opacity07: hsla(0, 0%, 0%,0.7);
+
+    --paragraph-color-opacity06: hsla(0, 0%, 0%,0.6);
+    --button-color-opacity06: hsla(0, 0%, 0%,0.6);
+
+    --paragraph-color-opacity05: hsla(0, 0%, 0%,0.5);
+
+    --paragraph-color-opacity04: hsla(0, 0%, 0%,0.4);
+    --del-color-opacity04: hsla(0, 0%, 0%,0.4);
+
+    /*font size de los distintos eementos, para el tamaño de la letra*/
+    --font-size-h1: 20px;
+    --font-size-h2: 19px;
+    --font-size-h3: 15px;
+    --font-size-strong: 19px;
+    --font-size-button: 15px;
+    --font-size-paragraph:14px;
+    --font-size-paragraph-input: 12px;
+    --font-size-del:10px;
+
+    /*Font size de letras de la plantilla hotel info*/
+    --font-size-button-hotel: 17px;
+    --font-size-h2-hotel:14px;
+    
+    /*Width Height de los distintos iconos*/
+
+    --width-size-icons-style:11px;
+    --height-size-icons-style:11px;
+
+    /*Plantilla hotel*/
+    --width-size-icons-hotel-top:20px;
+    --height-size-icons-hotel-top:18px;
+
+    --width-size-icons-hotel-persons:22px;
+    --height-size-icons-hotel-persons:18px;
+
+    --width-size-icons-hotel-cama:19px;
+    --height-size-icons-hotel-cama:16px;
+
+    --width-size-icons-hotel-desayuno_info:17px;
+    --height-size-icons-hotel-desayuno_info:13px;
+
+    /*Plantilla Selection*/
+    --width-size-icons-selection:16px;
+    --height-size-icons-selection:16px;
+
+    --width-size-icon-trash:19px;
+    --height-size-icon-trash:19px;
+
+    /*Plantilla Activities*/
+    --width-size-icons-activities-more-less:25px;
+    --height-size-icons-activities-more-less:25px;
+    --icons-more-less-activities-color:rgb(244,193,43);
+
+    --width-size-icons-activities-carrito:35px;
+    --height-size-icons-activities-carrito:35px;
+    --icon-carrito-activities-color:rgb(60,60,60);
+    
+    --width-size-icons-activities-calendar-clock:22px;
+    --height-size-icons-activities-calendar-clock:25px;
+    --icons-calendar-clock-activities-color:rgb(252,179,21);
+
+    /*Variables globales de los elementos dinamicos */
+
+    /*Backgrounds utilizados unicamente en los elementos dinamicos*/
+    --background-gray-dynamic: hsl(0, 4%, 91%);
+    --background-offer-green-dynamic: hsl(118, 52%, 42%);
+
+     /*Colores de letras y otros elementos de  los elementos dinamicos*/
+     --color-offer-green-dynamic: hsla(118, 52%, 42%,0.9);
+
+     /*Opacity aplicada en el color negro para obtener variaciones de grises de los elementos dinamicos*/
+    --h1-color-opacity07-dynamic: hsla(0, 0%, 0%,0.7);
+    --h2-color-opacity07-dynamic: hsla(0, 0%, 0%,0.7);
+    --paragraph-color-opacity05-dynamic: hsla(0, 0%, 0%,0.5);
+
+    /*font size de los distintos contenedores dinamicos*/
+    --font-size-h1-dynamic:15px;
+    --font-size-h2-dynamic: 15px;
+    --font-size-paragraph-dynamic:14px;
+    --font-size-span-dynamic-info: 9px;
+
+    /*Width Height de los distintos iconos dinamicos*/
+    --width-size-icons-dynamic-info:15px;
+    --height-size-icons-dynamic-info:15px;
+}

@@ -4,226 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/main.css">
   <title>Suite Vip</title>
+  <!-- Importacion del jQuery -->
+	<script src="assets/js/lib/jquery-3.7.0.min.js"></script>
+	<script src="assets/js/lib/jquery-ui.min.js"></script>
+	<script src="assets/js/lib/datepicker-es.js"></script>
 </head>
 <body>
 <div class="container">    
     <div class="main">
-        <div class="top">
-            <div class="top-img">
-                <img src="assets/images/hotel.jpeg" class="main-img" alt="hotel" width="190" height="142">
-                <div class="icon-main-js" id="main-icon-js">
-                    {% include '/assets/images/info.svg' %}
-                </div>
-            </div>
-            <div class="top-description">
-                <h1>Suite Vip</h1>
-                <span>Solo queda 1!!</span>
-                <p>Habitacion con cama de matrimonio, spa y Jacuzi. Cama de 200cm. impedit asperiores dolorum numquam molestiae hic libero maiores veniam minus error illo quisquam distinctio, laudantium </p>
-                <button>Ver más</button>
-            </div>
-        </div>
-        <div class="bottom">
-            <div class="table">
-                    <div class="first-tr trs gray-tr">
-                        <div class="first-th ths">
-                            {% include '/assets/images/2p.svg' %}
-                            <span>para 2 personas</span>
-                        </div>
-                        <div class="second-th ths">
-                            <span>flexible</span>
-                        </div>
-                        <div class="third-th third-th-font ths">
-                            <span>precio para 2 noches</span>
-                        </div>
-                    </div>
-                    <div class="second-tr border-tr trs">
-                        <div class="first-td tds ">
-                            {% include '/assets/images/cama.svg' %}
-                            <span>Solo alojamiento</span>
-                            
-                        </div>
-                        <div class="second-td tds">
-                            <span>Cancelación gratuita</span>
-                            <div class="icons-js" id="cancel-icon">
-                                {% include '/assets/images/info.svg' %}
-                            </div>
-                        </div>
-                        <div class="third-td tds">
-                            <p><del>450,00€</del><strong>325,00€</strong></p>
-                            <span class="third-td-amount">0</span>
-                        </div>
-                    </div>
-                    <div class="third-tr breakfast-tr trs">
-                        <div class="first-td tds">
-                            {% include '/assets/images/desayuno.svg' %}
-                            <span>Con desayuno</span>
-                        </div>
-                        <div class="second-td tds">
-                            <span>Cancelación gratuita</span>
-                            <div class="icons-js" id="cancel-icon-2">
-                                {% include '/assets/images/info.svg' %}
-                            </div>
-                        </div>
-                        <div class="third-td tds">
-                            <p><del>495,00€</del><strong>360,00€</strong></p>
-                            <span class="third-td-amount">0</span>
-                        </div>
-                    </div>
-                    <div class="first-tr trs gray-tr">
-                        <div class="first-th ths">
-                            {% include '/assets/images/2p.svg' %}
-                            <span>para 2 personas</span>
-                        </div>
-                        <div class="second-th offer-th  ths">
-                            <span>oferta</span>
-                        </div>
-                        <div class="third-th ths">
-                            <span>precio para 2 noches</span>
-                        </div>
-                    </div>
-                    <div class="second-tr  border-tr trs">
-                        <div class="first-td tds">
-                            {% include '/assets/images/cama.svg' %}
-                            <span>Solo alojamiento</span>
-                        </div>
-                        <div class="second-td offer-td tds">
-                            <span>NO reembolsable</span>
-                            {% include '/assets/images/info.svg' %}
-                        </div>
-                        <div class="third-td offer-td-p tds">
-                            <p><del>450,00€</del><strong>295,00€</strong></p>
-                            <span class="third-td-amount">1</span>
-                        </div>
-                    </div>
-                    <div class="third-tr breakfast-tr trs">
-                        <div class="first-td tds">
-                            {% include '/assets/images/desayuno.svg' %}
-                            <span>Con desayuno</span>
-                        </div>
-                        <div class="second-td offer-td tds">
-                            <span>NO reembolsable</span>
-                            {% include '/assets/images/info.svg' %}
-                        </div>
-                        <div class="third-td offer-td-p tds">
-                            <p><del>495,00€</del><strong>325,00€</strong></p>
-                            <span class="third-td-amount">0</span>
-                        </div>
-                    </div>
-                    <div class="first-tr trs gray-tr">
-                        <div class="first-th ths">
-                            {% include '/assets/images/2p.svg' %}
-                            <span>para 2 personas</span>
-                        </div>
-                        <div class="second-th offer-th ths">
-                            <span>oferta</span>
-                        </div>
-                        <div class="third-th ths">
-                            <span>precio para 2 noches</span>
-                        </div>
-                    </div>
-                    <div class="second-tr breakfast-tr trs">
-                        <div class="first-td tds">
-                            {% include '/assets/images/desayuno.svg' %}
-                            <span>Con desayuno</span>
-                        </div>
-                        <div class="second-td offer-td tds">
-                            <span>Oferta fin de semana romántico</span>
-                            <div class="icons-js" id="offer-icon">
-                                {% include '/assets/images/info.svg' %}
-                            </div>               
-                        </div>
-                        <div class="third-td offer-td-p week-td tds">
-                            <span class="third-td-first-span"><strong>460,00€</strong></span>
-                            <span class="third-td-amount">0</span>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        <div id="flexible-widnow-div" class="flexible-window windows-div">
-            <div class="flexible-window-title windows-title">
-                <h1>Flexible</h1>
-            </div>
-            <div class="flexible-window-text windows-div-text">
-                <h2>Cancelación gratuita</h2>
-                <p>Habitacion con cama de matrimonio, spa y Jacuzi. Cama de 200cm. impedit asperiores dolorum numquam molestiae hic libero maiores veniam minus error illo quisquam distinctio, laudantium </p>
-            </div>
-        </div>
-        <div id="offer-window-div" class="offer-window windows-div">
-            <div class="offer-window-title windows-title">
-                <h1>Oferta</h1>
-            </div>
-            <div class="offer-window-text windows-div-text">
-                <h2>Oferta finde semana romántico</h2>
-                <p>Habitacion con cama de matrimonio, spa y Jacuzi. Cama de 200cm. impedit asperiores dolorum numquam molestiae hic libero maiores veniam minus error illo quisquam distinctio, laudantium </p>
-            </div>
-        </div>
-        <div id="info-window-div" class="info-window ">
-            <div class="info-window-title ">
-                <h1>Suite Vip</h1>
-            </div>
-            <div class="info-window-details">
-                <div class="info-window-img ">
-                    <div class="info-window-imgs">
-                        <img src="assets/images/hotel.jpeg" alt="">
-                    </div>
-                    <div class="info-window-img-text">
-                        <span>12 m2</span>
-                        <p>Ocupación máxima: <span>2p</span></p>
-                    </div>
-                </div>
-                <div class="info-window-description ">
-                    <h2>Descripcion</h2>
-                    <p>Habitacion con cama de matrimonio, spa y Jacuzi. Cama de 200cm. impedit asperiores dolorum numquam molestiae hic libero maiores veniam minus error illo quisquam distinctio, laudantium </p>
-                </div>
-                <div class="info-window-equipment">
-                    <h2>Equipamiento</h2>
-                    <div class="info-window-equipment-imgs">
-                        <ul>
-                            <li>
-                                {% include '/assets/images/wifi.svg' %}
-                                <span>Conexión wifi</span>
-                            </li>
-                            <li>
-                                {% include '/assets/images/secador.svg' %}
-                                <span>Secador de pelo</span>
-                            </li>
-                            <li>
-                               {% include '/assets/images/amenitiez.svg' %}
-                                <span>Amenities</span>
-                            </li>
-                            <li>
-                                {% include '/assets/images/jacuzzi.svg' %}
-                                <span>Jacuzzi</span>
-                            </li>
-                            <li>
-                                {% include '/assets/images/aire.svg' %}
-                                <span>Aire acondicionado</span>
-                            </li>
-                            <li>
-                                 {% include '/assets/images/TV.svg' %}
-                                <span>TV gran formato</span>
-                            </li>
-                            <li>
-                                 {% include '/assets/images/estudio.svg' %}
-                                <span>Estudio</span>
-                            </li>
-                            <li>
-                                {% include '/assets/images/hervidor.svg' %}
-                                <span>Hervidor de agua</span>
-                            </li>
-                            <li>
-                                {% include '/assets/images/minibar.svg' %}
-                                <span>Minibar</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="main-left">
+           <div class="hotel-div" id="contenido-hotel"></div>   
+           <div class="flexible-div flexible-div-hide" id="contenido-flex"></div>
+           <div class="offer-div offer-div-hide" id="contenido-offer"></div>
+           <div class="info-div info-div-hide" id="contenido-info"></div>
+           <div class="activities-div" id="contenido-activities" data-lista='{{ lista }}'></div>   
+        </div>   
+        <div class="main-right">
+            <div class="selection-div" id="contenido-selection"></div> 
         </div>
     </div>
 </div>
-<script src="assets/js/app.js"></script>
+<script src="assets/js/app.js">
+</script>
 </body>
 </html>
+

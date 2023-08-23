@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg class="hora-icon" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-803.428,-2193.78)">
+        <g transform="matrix(-1.33781,0,0,1.33781,901.088,1849.5)">
+            <path d="M64,257.34C59.03,257.34 55,261.369 55,266.34C55,271.31 59.03,275.34 64,275.34C68.971,275.34 73,271.31 73,266.34C73,261.369 68.971,257.34 64,257.34ZM65.25,266.84C65.25,267.53 64.691,268.09 64,268.09L59,268.09C58.31,268.09 57.75,267.53 57.75,266.84C57.75,266.149 58.31,265.59 59,265.59L62.75,265.59L62.75,260.84C62.75,260.149 63.31,259.59 64,259.59C64.691,259.59 65.25,260.149 65.25,260.84L65.25,266.84Z" />
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,29 @@
+
+/* Contenido de style.css */
+@import url('./style.css');
+
+/* Contenido de SelectionWindow.css */
+@import url('./selection.css');
+
+/* Contenido de HotelWindow.css */
+@import url('./hotelInfo.css');
+
+/* Contenido de flexibleDiv.css */
+@import url('./flexibleDiv.css');
+
+/* Contenido de infoWindow.css */
+@import url('./infoWindow.css');
+
+/* Contenido de offerWindow.css */
+@import url('./offerWindow.css');
+
+/* Contenido de activities.css */
+@import url('./activities.css');
+
+@import url('./jquery-ui.min.css');
+
+@import url('./jquery-ui.theme.min.css');
+
+/* Variables globales */
+@import url('./globalVariables.css');
+

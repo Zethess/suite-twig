@@ -1,22 +1,11 @@
 <?php
+require_once 'vendor/autoload.php'; // Ruta al archivo autoload.php de Composer 
+require_once 'templates.php';
 
-require_once 'vendor/autoload.php'; // Ruta al archivo autoload.php de Composer
 
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
-
-// Configuración del Twig
-// Ruta a tu directorio de plantillas
-$templateDir = '.';
-$loader = new FilesystemLoader($templateDir);
-
-// Crea la instancia de Twig
-$twig = new Environment($loader, [
-    'debug' => true, // Activa el modo debug (opcional)
-]);
-
-// Agrega cualquier configuración adicional según tus necesidades
-
-// Renderiza una plantilla Twig
-$template = $twig->load('index.twig');
-echo $template->render();
+//Se obtienen los datos de la solicitud AJAX enviados al servidor Esto lee los datos enviados en el cuerpo 
+//de la solicitud y los decodifica en un array asociativo de PHP llamado $Datos.
+$Datos   = json_decode(file_get_contents('php://input'),true);
+// Crear instancia Templates
+$templates = new Templates($Datos);
+echo $templates->Ejecutar();

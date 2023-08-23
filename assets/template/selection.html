@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Flexible</title>
+</head>
+<body>
+<div class="container-selection">    
+    <h1>Mi selección</h1>
+    <div id="selection-window-div" class="selection-window">
+        <div class="selection-window-title">
+            <h2>Hotel Montanel</h2>
+            <div class="container-trash-icon" id="container-trash-icon">
+                {% include 'assets/images/basura.svg' %}
+            </div>
+        </div>
+            <div class="selection-date-info">
+                <ul>
+                    <li>
+                        <p class="date-title">Estancia:</p>
+                        <p class="date-details">2 noches</p>
+                    </li>
+                    <li>
+                        <p class="date-title">Llegada:</p>
+                        <p class="date-details">Lunes, 7 de Julio 2023</p>
+                    </li>
+                    <li>
+                        <p class="date-title">Salida:</p>
+                        <p class="date-details">Miércoles, 9 Julio 2023</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="selection-details-info">
+                <strong>Suite Vip</strong>
+                <ul>
+                    <li>
+                        <div class="selection-details-info-first-img">
+                            {% include 'assets/images/personas.svg' %}
+                        </div>
+                        <p>2 adultos</p>
+                    </li>
+                    <li>
+                        <div class="selection-details-info-first-img">
+                            {% include 'assets/images/cama.svg' %}
+                        </div>
+                        <p>Solo alojamiento</p>
+                    </li>
+                    <li class="selection-details-info-third">
+                        <div class="selection-details-info-offer">
+                            <div class="selection-details-info-first-img">
+                                {% include 'assets/images/oferta.svg' %}
+                            </div>
+                            <p class="details-offer">Oferta: No reembolsable</p>
+                        </div>
+                        <p class="price-offer"><del>450,00€</del><strong>295,00€</strong></p>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="selection-summary-info">
+                    <p>Total reserva <strong>295,00€</strong></p>
+                </div>
+            </div>
+            <button class="end-button" id="end-button">Finalizar</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

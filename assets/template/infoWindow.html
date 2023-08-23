@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  
+ 
+  <title>Info</title>
+</head>
+<body>
+<div class="info-container">    
+    <div id="info-window-div" class="info-window ">
+        <div class="info-window-title grid-windows">
+            <h1>Suite Vip</h1>
+            <div class="flex-close-icon" id="info-close-icon">
+                {% include 'assets/images/cerrar.svg' %}
+            </div>
+        </div>
+        <div class="info-window-details">
+            <div class="info-window-img ">
+                <div class="info-window-imgs">
+                    <img src="assets/images/hotel.jpeg" alt="">
+                </div>
+                <div class="info-window-img-text">
+                    <span>12 m2</span>
+                    <p>Ocupación máxima: <span>2p</span></p>
+                </div>
+            </div>
+            <div class="info-window-description ">
+                <h2>Descripcion</h2>
+                <p>Habitacion con cama de matrimonio, spa y Jacuzi. Cama de 200cm. impedit asperiores dolorum numquam molestiae hic libero maiores veniam minus error illo quisquam distinctio, laudantium </p>
+            </div>
+            <div class="info-window-equipment">
+                <h2>Equipamiento</h2>
+                <div class="info-window-equipment-imgs">
+                    <ul>
+                        <li>
+                            {% include 'assets/images/wifi.svg' %}
+                            <span>Conexión wifi</span>
+                        </li>
+                        <li>
+                            {% include 'assets/images/secador.svg' %}
+                            <span>Secador de pelo</span>
+                        </li>
+                        <li>
+                           {% include 'assets/images/amenitiez.svg' %}
+                            <span>Amenities</span>
+                        </li>
+                        <li>
+                            {% include 'assets/images/jacuzzi.svg' %}
+                            <span>Jacuzzi</span>
+                        </li>
+                        <li>
+                            {% include 'assets/images/aire.svg' %}
+                            <span>Aire acondicionado</span>
+                        </li>
+                        <li>
+                             {% include 'assets/images/TV.svg' %}
+                            <span>TV gran formato</span>
+                        </li>
+                        <li>
+                             {% include 'assets/images/estudio.svg' %}
+                            <span>Estudio</span>
+                        </li>
+                        <li>
+                            {% include 'assets/images/hervidor.svg' %}
+                            <span>Hervidor de agua</span>
+                        </li>
+                        <li>
+                            {% include 'assets/images/minibar.svg' %}
+                            <span>Minibar</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

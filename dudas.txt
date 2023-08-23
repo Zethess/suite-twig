@@ -1,0 +1,200 @@
+CREATE TABLE actividad (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  imagen VARCHAR(255) NOT NULL,
+  titulo VARCHAR(100) NOT NULL,
+  parrafo VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE ticket (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  subtitulo VARCHAR(255),
+  precio INT NOT NULL
+);
+
+CREATE TABLE opcion (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  subtitulo VARCHAR(255),
+  precio INT NOT NULL
+);
+
+INSERT INTO actividad (imagen, titulo, parrafo)
+VALUES ('assets/images/hotel.jpeg', 'Buceo en aguas caribeñas', 'Habitación con cama de matrimonio, spa y Jacuzi. Cama de 200cm. Impedit asperiores dolorum numquam molestiae hic libero maiores veniam minus error illo quisquam distinctio, laudantium');
+
+
+INSERT INTO ticket (nombre, subtitulo, precio)
+VALUES ( 'Entrada Adulto', 'Mayores de 12 años, precio por persona', '18');
+
+INSERT INTO ticket ( nombre, subtitulo, precio)
+VALUES ( 'Niños', 'Menores de 12', '12');
+
+INSERT INTO opcion ( nombre, subtitulo, precio)
+VALUES ( 'Audioguía', 'Disponible en Español, inglés y francés', '7');
+
+INSERT INTO actividad (imagen, titulo, parrafo)
+VALUES ('assets/images/hotel.jpeg', 'Ruta Spa Ecologia con masaje', 'Habitación con cama de tela, ducha y piscina. Cama de 1200cm. Impedit asperiores dolorum numquam molestiae hic libero maiores veniam minus error illo quisquam distinctio, laudantium');
+
+INSERT INTO ticket ( nombre, subtitulo, precio,tipo_ticket,id_elemento)
+VALUES ( 'Entrada Adulto', 'Mayores de 12 años, precio por persona', '18','1','2');
+
+INSERT INTO ticket ( nombre, subtitulo, precio,tipo_ticket,id_elemento)
+VALUES ( 'Entrada Jovenes', 'Menores de 18', '8','1','2');
+
+INSERT INTO ticket ( nombre, subtitulo, precio)
+VALUES ( 'Entrada niños', 'Menores de 12 años, precio por persona', '5');
+
+INSERT INTO ticket ( nombre, subtitulo, precio)
+VALUES ( 'Niños', 'Menores de 12', '12');
+
+INSERT INTO ticket ( nombre, subtitulo, precio,tipo_ticket,id_elemento)
+VALUES ( 'Audioguía', 'Disponible en Español, inglés y francés', '7','2','1');
+
+INSERT INTO ticket ( nombre, subtitulo, precio,tipo_ticket,id_elemento)
+VALUES ( 'Paseo a caballo', 'Disponible en Español, inglés y francés', '16','2','2');
+
+RENAME TABLE actividad TO elemento;
+
+ALTER TABLE ticket
+ADD COLUMN id_elemento INT NOT NULL,
+
+SELECT COUNT(DISTINCT t.id_elemento)
+FROM ticket AS t
+INNER JOIN elemento AS e ON t.id_elemento = e.id_elemento;
+
+ALTER TABLE ticket
+ADD FOREIGN KEY (id_elemento) REFERENCES elemento(id_elemento);
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- <link rel="stylesheet" href="../css/activities.css"> -->
+  <title>Activities</title>
+</head>
+<body>
+<div class="container-activities">
+        {% for experiences in lista.main.Actividades %}
+        <div id="activities-{{ loop.index }}" class="activity-bottom activity-section" data-activity-index="{{ loop.index }}">
+            <div class="activity-bottom-details activities-detail">
+                    <div class="activity-bottom-img">
+                        <!-- <img src="../images/hotel.jpeg" class="activity-bottom-img" alt="submarinismo" width="220" height="188"> -->
+                        <img src="{{experiences.imagen}}" class="activity-bottom-img" alt="submarinismo" width="220" height="188">
+                    </div>
+                    
+                    <div class="activity-bottom-details-description activities-detail-description">
+                        <h2>{{experiences.titulo}}</h2>
+                        <!-- <h2>Ruta Spa Ecologia con masaje</h2> -->
+                        <!-- <p>Habitacion con cama de matrimonio, spa y Jacuzi. Cama de 200cm. impedit asperiores dolorum numquam molestiae hic libero maiores veniam minus error illo quisquam distinctio, laudantium </p> -->
+                        <p>{{experiences.parrafo}}</p>
+                        <div class="activity-bottom-details-description-buttons">
+                            <button id="info-activity-bottom-button" class="activity-bottom-details-description btn-more-button buttons">Ver más</button>
+                            <button id="cancel-activity-bottom-button" class="main-activity-description-buttons-second btn-reservar-button buttons">Reservar</button>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div id="second-activity-div" class="second-activity-div ">
+                    <div class="activity-bottom-date second-activity-child">
+                        <div class="fecha-hora-container">
+                            <!-- <div class="dia-semana">
+                            <span class="span-dia" id="dia-semana">lunes</span>
+                            </div> -->
+                            <div class="input-fecha-hora">
+                                <input type="text" id="fecha-hora-{{ loop.index }}" name="fecha-hora" class="ocultar-icono" readonly data-target-summary="activity-div-summary-datetime-{{ loop.index }}">
+                                <label for="fecha-hora-{{ loop.index }}" class="icons-fecha-hora">
+                                <span class="icono-fecha btn_icono_fecha"> {% include '/assets/images/calendario.svg' %}</span>
+                                <span class="icono-hora btn_icono_hora"> {% include '/assets/images/hora.svg' %}</span>
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activity-bottom-prices second-activity-child">
+                        <div class="first-activity-bottom-prices">
+                            <div class="activity-prices-first-tr prices-trs">
+                                <div class="prices-first-th prices-ths">
+                                    <p>Selecciones productos</p>
+                                </div>
+                                <div class="prices-second-th prices-ths">
+                                    <p>Precio</p>
+                                </div>
+                            
+                                <div class="prices-third-th prices-ths">
+                                    <p>Cantidad</p>
+                                </div>
+                            </div>
+                            {% for ticket in lista.main.Tickets %}
+                            <div id="activities-{{ticket.id_ticket}}" class="activity-prices-second-tr prices-trs prices-trs-inners">
+                                <div class="prices-first-td prices-tds">
+                                <h3>{{ ticket.nombre }}</h3>
+                                <p>{{ ticket.subtitulo }}</p>
+                                </div>
+                                
+                                <div class="prices-second-td prices-tds">
+                                <p class="prices-second-td-p">{{ ticket.precio }}</p>
+                                </div>
+                                <div class="prices-third-td prices-tds">
+                                    <div class="decrease-ammount-first-tr decrease-ammount-disabled btn_menos_evnt"id="decrease-ammount-first-tr-{{ loop.index }}">
+                                        {% include '/assets/images/menos.svg' %}
+                                    </div>
+                                    <span id="ammount-first-tr-{{ loop.index }}">0</span>
+                                    <div class="increase-ammount-first-tr btn_mas_evnt  "id="increase-ammount-first-tr-{{ loop.index }}">
+                                        {% include '/assets/images/mas.svg' %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}   
+                        </div>
+                        <div class="second-activity-bottom-prices">
+                            <div class="activity-prices-fourth-tr prices-trs">
+                                <div class="prices-first-th prices-ths">
+                                    <p>Opciones</p>
+                                </div>
+                            </div>
+                            {% for opcion in lista.main.Opciones %}
+                            <div id="opciones-{{opcion.id_opcion}}" class="activity-prices-fifth-tr prices-trs prices-trs-inners ">
+                                <div class="prices-first-td prices-tds">
+                                    <h3>{{ opcion.nombre }}</h3>
+                                    <p>{{ opcion.subtitulo }}</p>
+                                </div>
+                                <div class="prices-second-td prices-tds">
+                                    <p class="prices-second-td-p">{{ opcion.precio }}</p>
+                                </div>
+                                <div class="prices-third-td prices-tds">
+                                    <div class="decrease-ammount-third-tr btn_menos_evnt decrease-ammount-disabled "id="decrease-ammount-third-tr-{{ loop.index }}">
+                                        {% include '/assets/images/menos.svg' %}
+                                    </div>
+                                    <span id="ammount-third-tr-{{ loop.index }}">0</span>
+                                    <div class="increase-ammount-third-tr btn_mas_evnt "id="increase-ammount-third-tr-{{ loop.index }}">
+                                        {% include '/assets/images/mas.svg' %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %} 
+                        </div>
+                    </div>
+                    <div class="activity-div-summary second-activity-child">
+                        <div class="activity-div-summary-details">
+                            <p><span id="activity-div-summary-datetime-{{ loop.index }}" class="activity-div-summary-details-datetime">Martes 2023-12-01</span></p>
+                            <div class="activity-div-summary-tickets-prices">
+                                <p ><span id="activity-div-summary-tickets-{{ loop.index }}" class="activity-div-summary-tickets-span">0</span> tickets</p>
+                                <p class="activity-div-summary-total"><span id="activity-div-summary-total-{{ loop.index }}" class="activity-div-summary-total-span">0</span>€</p>
+                            </div>
+                        </div>
+                        <button class="activity-buttom-summary buttons" id="activity-buttom-summary">
+                            <div>{% include '/assets/images/carrito.svg' %}</div>
+                            <p>Añadir a mi reserva</p>
+                        </button>
+                    </div>
+                </div>  
+        </div>
+        {% endfor %}
+       
+    </div>
+</div>
+<!-- <script src="../js/temporal.js"></script> -->
+</body>
+</html>
+

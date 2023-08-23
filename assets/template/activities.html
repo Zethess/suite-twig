@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- <link rel="stylesheet" href="../css/activities.css"> -->
+  <title>Activities</title>
+</head>
+<body>
+<div class="container-activities">
+    {% for elementoActual in lista.main.Elementos %}
+    {% if elementoActual.tipo_elemento == 2 %}
+    {% set cierreDiv_first_activity_bottom_prices = false %}
+    {% set second_activity_bottom_prices = false %}
+    <div id="activities-{{ elementoActual.id_elemento }}" class="activity-bottom activity-section" data-activity-index="{{ loop.index }}">
+        <div class="activity-bottom-details activities-detail">
+            <div class="activity-bottom-img-div">
+                <!-- <img src="../images/hotel.jpeg" class="activity-bottom-img" alt="submarinismo" width="220" height="188"> -->
+                <img src="{{elementoActual.imagen}}" class="activity-bottom-img" alt="submarinismo" width="220" height="188">
+                <div class="icon-activity-bottom-js" id="activity-bottom-icon-js">
+                    {% include '/assets/images/info.svg' %}
+                </div>
+            </div>
+            
+            <div class="activity-bottom-details-description activities-detail-description">
+                <h2>{{elementoActual.titulo}}</h2>
+                <!-- <h2>Ruta Spa Ecologia con masaje</h2> -->
+                <!-- <p>Habitacion con cama de matrimonio, spa y Jacuzi. Cama de 200cm. impedit asperiores dolorum numquam molestiae hic libero maiores veniam minus error illo quisquam distinctio, laudantium </p> -->
+                <p>{{elementoActual.parrafo}}</p>
+                <div class="activity-bottom-details-description-buttons">
+                    <button id="info-activity-bottom-button" class="activity-bottom-details-description btn-more-button buttons">Ver más</button>
+                    <button id="cancel-activity-bottom-button" class="main-activity-description-buttons-second btn-reservar-button buttons">Reservar</button>
+                </div>
+            </div>
+            
+        </div>
+        <div id="second-activity-div" class="second-activity-div ">
+            <div class="activity-bottom-date second-activity-child">
+                <div class="fecha-hora-container">
+                    <!-- <div class="dia-semana">
+                    <span class="span-dia" id="dia-semana">lunes</span>
+                    </div> -->
+                    <div class="input-fecha-hora">
+                        <input type="text" id="fecha-hora-{{ loop.index }}" name="fecha-hora" class="ocultar-icono" readonly data-target-summary="activity-div-summary-datetime-{{ loop.index }}">
+                        <label for="fecha-hora-{{ loop.index }}" class="icons-fecha-hora">
+                        <span class="icono-fecha btn_icono_fecha"> {% include '/assets/images/calendario.svg' %}</span>
+                        <span class="icono-hora btn_icono_hora"> {% include '/assets/images/hora.svg' %}</span>
+                    </label>
+                    </div>
+                </div>
+            </div>
+            <div class="activity-bottom-prices second-activity-child">
+                <div class="first-activity-bottom-prices">
+                    <div class="activity-prices-first-tr prices-trs">
+                        <div class="prices-first-th prices-ths">
+                            <p>Selecciones productos</p>
+                        </div>
+                        <div class="prices-second-th prices-ths">
+                            <p>Precio</p>
+                        </div>
+                    
+                        <div class="prices-third-th prices-ths">
+                            <p>Cantidad</p>
+                        </div>
+                    </div>
+                    {% for ticket in elementoActual.Tickets %}
+                    {% if ticket.tipo_ticket == 1 %}
+                        <div id="activities-{{ticket.id_ticket}}" class="activity-prices-second-tr prices-trs prices-trs-inners">
+                            <div class="prices-first-td prices-tds">
+                            <h3>{{ ticket.nombre }}</h3>
+                            <p>{{ ticket.subtitulo }}</p>
+                            </div>
+                            
+                            <div class="prices-second-td prices-tds">
+                            <p class="prices-second-td-p">{{ ticket.precio }}</p>
+                            </div>
+                            <div class="prices-third-td prices-tds">
+                                <div class="decrease-ammount-first-tr decrease-ammount-disabled btn_menos_evnt"id="decrease-ammount-first-tr-{{ loop.index }}">
+                                    {% include '/assets/images/menos.svg' %}
+                                </div>
+                                <span id="ammount-first-tr-{{ loop.index }}">0</span>
+                                <div class="increase-ammount-first-tr btn_mas_evnt  "id="increase-ammount-first-tr-{{ loop.index }}">
+                                    {% include '/assets/images/mas.svg' %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if cierreDiv_first_activity_bottom_prices ==  false %}
+                </div>
+                    {% set cierreDiv_first_activity_bottom_prices = true %}
+                    {% endif %}
+                    {% if ticket.tipo_ticket ==  2 %}
+                    {% if second_activity_bottom_prices ==  false %}
+                <div class="second-activity-bottom-prices">
+                    <div class="activity-prices-fourth-tr prices-trs">
+                        <div class="prices-first-th prices-ths">
+                            <p>Opciones</p>
+                        </div>
+                    </div>
+                    {% set second_activity_bottom_prices = true %}
+                    {% endif %}  
+                    <div id="opciones-{{opcion.id_opcion}}" class="activity-prices-fifth-tr prices-trs prices-trs-inners ">
+                        <div class="prices-first-td prices-tds">
+                            <h3>{{ ticket.nombre }}</h3>
+                            <p>{{ ticket.subtitulo }}</p>
+                        </div>
+                        <div class="prices-second-td prices-tds">
+                            <p class="prices-second-td-p">{{ ticket.precio }}</p>
+                        </div>
+                        <div class="prices-third-td prices-tds">
+                            <div class="decrease-ammount-third-tr btn_menos_evnt decrease-ammount-disabled "id="decrease-ammount-third-tr-{{ loop.index }}">
+                                {% include '/assets/images/menos.svg' %}
+                            </div>
+                            <span id="ammount-third-tr-{{ loop.index }}">0</span>
+                            <div class="increase-ammount-third-tr btn_mas_evnt "id="increase-ammount-third-tr-{{ loop.index }}">
+                                {% include '/assets/images/mas.svg' %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %} 
+                </div>
+            </div>
+            <div class="activity-div-summary second-activity-child">
+                <div class="activity-div-summary-details">
+                    <p><span id="activity-div-summary-datetime-{{ loop.index }}" class="activity-div-summary-details-datetime">Martes 2023-12-01</span></p>
+                    <div class="activity-div-summary-tickets-prices">
+                        <p ><span id="activity-div-summary-tickets-{{ loop.index }}" class="activity-div-summary-tickets-span">0</span> tickets</p>
+                        <p class="activity-div-summary-total"><span id="activity-div-summary-total-{{ loop.index }}" class="activity-div-summary-total-span">0</span>€</p>
+                    </div>
+                </div>
+                <button class="activity-buttom-summary buttons" id="activity-buttom-summary">
+                    <div>{% include '/assets/images/carrito.svg' %}</div>
+                    <p>Añadir a mi reserva</p>
+                </button>
+            </div>
+        </div>  
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+<!-- <script src="../js/temporal.js"></script> -->
+</body>
+</html>
+

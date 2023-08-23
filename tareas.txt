@@ -1,0 +1,1 @@
+Crear dinamicamente el html principal y segun el tipo, con un if y el include, que cargue uno u otro

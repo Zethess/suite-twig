@@ -1,0 +1,173 @@
+
+<div class="container-hotel">    
+    <div class="main-hotel">
+        {% for elementoHotel in lista.main.Elementos %}
+        {% if elementoHotel.tipo_elemento == 1 %}
+        <div class="top">
+            <div class="top-img">
+                <img src="{{elementoHotel.imagen}}" class="main-img" alt="hotel" width="190" height="142">
+                <div class="icon-main-js" id="main-icon-js">
+                    {% include '/assets/images/info.svg' %}
+                    
+                </div>
+            </div>
+            
+            <div class="top-description">
+                <h1>{{elementoHotel.titulo}}</h1>
+                <h2>Solo queda 1!!</h2>
+                <p>{{elementoHotel.parrafo}} </p>
+                <button>Ver más</button>
+            </div>
+        </div>
+        {% endif %} 
+        {% endfor %} 
+        <div class="bottom">
+            <div class="table">
+                    <div class="first-tr trs gray-tr">
+                        <div class="first-th ths">
+                            {% include '/assets/images/2p.svg' %}
+                            
+                            <span>para 2 personas</span>
+                        </div>
+                        <div class="second-th ths">
+                            <span>flexible</span>
+                        </div>
+                        <div class="third-th third-th-font ths">
+                            <span>precio para 2 noches</span>
+                        </div>
+                        <div class="fourth-th input-th ths"> </div>
+                    </div>
+                    <div class="second-tr border-tr trs inner-tr">
+                        <div class="first-td tds ">
+                            {% include '/assets/images/cama.svg' %}
+                            
+                            <span>Solo alojamiento</span>
+                            
+                        </div>
+                        <div class="second-td tds">
+                            <span>Cancelación gratuita</span>
+                            <div class="icons-js" id="cancel-icon">
+                                {% include '/assets/images/info.svg' %}
+                                
+                            </div>
+                        </div>
+                        <div class="third-td tds">
+                            <p><del>450,00€</del><strong>325,00€</strong></p>
+                           
+                            
+                        </div>
+                        <div class="fourth-td input-td tds">
+                            <input type="text" id="first-amount" name="first-amount" class="third-td-amount" placeholder="0">    
+                        </div>
+                    </div>
+                    <div class="third-tr breakfast-tr trs inner-tr">
+                        <div class="first-td tds">
+                            {% include '/assets/images/desayuno.svg' %}
+                            
+                            <span>Con desayuno</span>
+                        </div>
+                        <div class="second-td tds">
+                            <span>Cancelación gratuita</span>
+                            <div class="icons-js" id="cancel-icon-2">
+                                {% include '/assets/images/info.svg' %}
+                                
+                            </div>
+                        </div>
+                        <div class="third-td tds">
+                            <p><del>495,00€</del><strong>360,00€</strong></p>
+                           
+                        </div>
+                        <div class="fourth-td input-td tds">
+                            <input type="text" id="second-amount" name="second-amount" class="third-td-amount" placeholder="0">    
+                        </div>
+                    </div>
+                    <div class="fourth-tr input-tr trs"> </div>
+                    <div class="first-tr trs gray-tr">
+                        <div class="first-th ths">
+                            {% include '/assets/images/2p.svg' %}
+                            
+                            <span>para 2 personas</span>
+                        </div>
+                        <div class="second-th offer-th  ths">
+                            <span>oferta</span>
+                        </div>
+                        <div class="third-th ths">
+                            <span>precio para 2 noches</span>
+                        </div>
+                        <div class="fourth-th input-th ths"> </div>
+                    </div>
+                    <div class="second-tr  border-tr trs inner-tr">
+                        <div class="first-td tds">
+                            {% include '/assets/images/cama.svg' %}
+                            
+                            <span>Solo alojamiento</span>
+                        </div>
+                        <div class="second-td offer-td tds">
+                            <span>NO reembolsable</span>
+                            {% include '/assets/images/info.svg' %}
+                            
+                        </div>
+                        <div class="third-td offer-td-p tds">
+                            <p><del>450,00€</del><strong>295,00€</strong></p>
+                        </div>
+                        <div class="fourth-td input-td tds">
+                            <input type="text" id="third-amount" name="third-amount" class="third-td-amount" placeholder="1">    
+                        </div>
+                    </div>
+                    <div class="third-tr breakfast-tr trs inner-tr">
+                        <div class="first-td tds">
+                            {% include '/assets/images/desayuno.svg' %}
+                            
+                            <span>Con desayuno</span>
+                        </div>
+                        <div class="second-td offer-td tds">
+                            <span>NO reembolsable</span>
+                            {% include '/assets/images/info.svg' %}
+                            
+                        </div>
+                        <div class="third-td offer-td-p tds">
+                            <p><del>495,00€</del><strong>325,00€</strong></p>
+                        </div>
+                        <div class="fourth-td input-td tds">
+                            <input type="text" id="fourth-amount" name="fourth-amount" class="third-td-amount" placeholder="0">    
+                        </div>
+                    </div>
+                    <div class="first-tr trs gray-tr">
+                        <div class="first-th ths">
+                            {% include '/assets/images/2p.svg' %}
+                            
+                            <span>para 2 personas</span>
+                        </div>
+                        <div class="second-th offer-th ths">
+                            <span>oferta</span>
+                        </div>
+                        <div class="third-th ths">
+                            <span>precio para 2 noches</span>
+                        </div>
+                        <div class="fourth-th input-th ths"> </div>
+                    </div>
+                    <div class="second-tr breakfast-tr trs inner-tr">
+                        <div class="first-td tds">
+                            {% include '/assets/images/desayuno.svg' %}
+                            
+                            <span>Con desayuno</span>
+                        </div>
+                        <div class="second-td offer-td tds">
+                            <span>Oferta fin de semana romántico</span>
+                            <div class="icons-js" id="offer-icon">
+                                {% include '/assets/images/info.svg' %}
+                                
+                            </div>               
+                        </div>
+                        <div class="third-td offer-td-p week-td tds">
+                            <span class="third-td-first-span"><strong>460,00€</strong></span>
+                        </div>
+                        <div class="fourth-td input-td tds">
+                            <input type="text" id="fifth-amount" name="fifth-amount" class="third-td-amount" placeholder="0">    
+                        </div>
+                    </div>
+                   
+            </div>
+        </div>
+    </div>
+</div>
